@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>SaCode</title>
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kursus SaCode - Learn How To Code" />
+    <meta property="og:description" content="Tersedia bagi semua kalangan yang ingin menambah skill
+    atau pengetahuan terkait pemrograman komputer." />
+    <meta property="og:url" content="https://sacode.web.id/kursus" />
+    <meta property="og:site_name" content="SaCode - Learn How To Code" />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!-- ***** All CSS Files ***** -->
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="http://sacode.web.id/assets/css/style.css">
+
+</head>
+
+<body class="homepage-4">
+    <!--====== Scroll To Top Area Start ======-->
+    <div id="scrollUp" title="Scroll To Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!--====== Scroll To Top Area End ======-->
+
+    <div class="main">
+
+        <!-- ***** Courses Area Start ***** -->
+        <section id="courses" class="section features-area style-two overflow-hidden ptb_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-7">
+                        <!-- Section Heading -->
+                        <div class="section-heading">
+                            <span class="d-inline-block rounded-pill shadow-sm fw-5 px-4 py-2 mb-3">
+                                <i class="far fa-lightbulb text-primary mr-1"></i>
+                                <span class="text-primary">Kursus</span>
+                                Tersedia
+                            </span>
+                            <h2>Kursus di SaCode</h2>
+                            <p class="d-none d-sm-block mt-4">Tersedia dalam bentuk tatap muka online dan juga offline.
+                                Informasi lebih lengkap akan diberikan pada saat pendaftaran. <br> <br>
+                                <span class="text-primary"><i class="fas fa-circle"></i> Sudah tersedia saat ini</span>
+                                <span class="text-secondary ml-lg-5"><i class="fas fa-circle"></i> Akan tersedia
+                                    kemudian</span>
+                            </p>
+                            <p class="d-block d-sm-none mt-4">Tersedia dalam bentuk tatap muka online dan juga offline.
+                                Informasi lebih lengkap akan diberikan pada saat pendaftaran. <br> <br>
+                                <span class="text-primary"><i class="fas fa-circle"></i> Sudah tersedia saat ini</span>
+                                <span class="text-secondary ml-lg-5"><i class="fas fa-circle"></i> Akan tersedia
+                                    kemudian</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="kursus">
+                    
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="btn btn-primary text-light">Tambah</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ***** Courses Area End ***** -->
+
+
+
+
+
+        <!--====== Height Emulator Area Start ======-->
+        <div class="height-emulator d-none d-lg-block"></div>
+        <!--====== Height Emulator Area End ======-->
+
+        <!--====== Footer Area Start ======-->
+        <footer class="footer-area footer-fixed">
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                                <!-- Copyright Right -->
+                                <div class="text-center py-5">&copy; Copyrights 2021 <b>SaCode</b> All rights reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+        <!--====== Footer Area End ======-->
+    </div>
+
+
+    <!-- ***** All jQuery Plugins ***** -->
+
+    <!-- jQuery(necessary for all JavaScript plugins) -->
+    <script src="http://sacode.web.id/assets/js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="http://sacode.web.id/assets/js/bootstrap/popper.min.js"></script>
+    <script src="http://sacode.web.id/assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugins js -->
+    <script src="http://sacode.web.id/assets/js/plugins/plugins.min.js"></script>
+
+    <!-- Active js -->
+    <script src="http://sacode.web.id/assets/js/active.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        fetch_data();
+
+        function fetch_data()
+        {
+            $.ajax({
+                url:"fetch.php",
+                success:function(data)
+                {
+                    document.getElementById("kursus").innerHTML = data;
+                }
+            })
+        }
+
+    });
+
+</script>
